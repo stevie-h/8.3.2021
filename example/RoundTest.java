@@ -109,11 +109,11 @@ public class RoundTest
     }
 
     @Test
-    public void testRoundZeroPointFive()
+    public void testRoundMidPoint()
     {
-        float actualResult = rz.round(RoundTestData.testRoundZeroPointFiveN);
+        float actualResult = rz.round(RoundTestData.testRoundMidPointN);
 
-        assertEquals(RoundTestData.testRoundZeroPointFiveExpectedResult, actualResult);
+        assertEquals(RoundTestData.testRoundMidPointExpectedResult, actualResult);
     }
 
     @Test
@@ -126,15 +126,15 @@ public class RoundTest
     @Test
     public void testRoundZeroPointFour()
     {
-        float actualResult = rz.round(RoundTestData.testRoundZeroPointFourN);
-        assertEquals(RoundTestData.testRoundZeroPointFourExpectedResult, actualResult);
+        float actualResult = rz.round(RoundTestData.testRoundMidPointUnderN);
+        assertEquals(RoundTestData.testRoundMidPointUnderExpectedResult, actualResult);
     }
 
     @Test
     public void testRoundZeroPointSix()
     {
-        float actualResult = rz.round(RoundTestData.testRoundZeroPointSixN);
-        assertEquals(RoundTestData.testRoundZeroPointSixExpectedResult, actualResult);
+        float actualResult = rz.round(RoundTestData.testRoundMidPointOverN);
+        assertEquals(RoundTestData.testRoundMidPointOverExpectedResult, actualResult);
     }
 
     @Test
