@@ -94,12 +94,6 @@ public class RoundTest
         assertEquals(RoundTestData.testRoundDownUnderZeroExpectedResult, actualResult);
     }
 
-    @Test
-    public void testRoundOne()
-    {
-        float actualResult = rz.round(RoundTestData.testRoundOneN);
-        assertEquals(RoundTestData.testRoundOneExpectedResult, actualResult);
-    }
 
     @Test
     public void testRoundZero()
@@ -109,11 +103,31 @@ public class RoundTest
     }
 
     @Test
+    public void testRoundOne()
+    {
+        float actualResult = rz.round(RoundTestData.testRoundOneN);
+        assertEquals(RoundTestData.testRoundOneExpectedResult, actualResult);
+    }
+
+    @Test
     public void testRoundMidPoint()
     {
         float actualResult = rz.round(RoundTestData.testRoundMidPointN);
-
         assertEquals(RoundTestData.testRoundMidPointExpectedResult, actualResult);
+    }
+
+    @Test
+    public void testRoundMidPointUnder()
+    {
+        float actualResult = rz.round(RoundTestData.testRoundMidPointUnderN);
+        assertEquals(RoundTestData.testRoundMidPointUnderExpectedResult, actualResult);
+    }
+
+    @Test
+    public void testRoundMidPointOver()
+    {
+        float actualResult = rz.round(RoundTestData.testRoundMidPointOverN);
+        assertEquals(RoundTestData.testRoundMidPointOverExpectedResult, actualResult);
     }
 
     @Test
@@ -124,20 +138,6 @@ public class RoundTest
     }
 
     @Test
-    public void testRoundZeroPointFour()
-    {
-        float actualResult = rz.round(RoundTestData.testRoundMidPointUnderN);
-        assertEquals(RoundTestData.testRoundMidPointUnderExpectedResult, actualResult);
-    }
-
-    @Test
-    public void testRoundZeroPointSix()
-    {
-        float actualResult = rz.round(RoundTestData.testRoundMidPointOverN);
-        assertEquals(RoundTestData.testRoundMidPointOverExpectedResult, actualResult);
-    }
-
-    @Test
     public void testRoundZeroPointHigh()
     {
         float actualResult = rz.round(RoundTestData.testRoundZeroPointHighN);
@@ -145,17 +145,17 @@ public class RoundTest
     }
 
     @Test
-    public void testRoundOverOne()
-    {
-        float actualResult = rz.round(RoundTestData.testRoundOverOneN);
-        assertEquals(RoundTestData.testRoundOverOneExpectedResult, actualResult);
-    }
-
-    @Test
     public void testRoundUnderZero()
     {
         float actualResult = rz.round(RoundTestData.testRoundUnderZeroN);
         assertEquals(RoundTestData.testRoundUnderZeroExpectedResult, actualResult);
+    }
+
+    @Test
+    public void testRoundOverOne()
+    {
+        float actualResult = rz.round(RoundTestData.testRoundOverOneN);
+        assertEquals(RoundTestData.testRoundOverOneExpectedResult, actualResult);
     }
 
 }
